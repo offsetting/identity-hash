@@ -1,13 +1,14 @@
-# NoHashHasher
+# IdentityHasher
+This is a fork of the inactive project [paritytech/nohash-hasher](https://github.com/paritytech/nohash-hasher).
 
-For an enabled type `T`, a `NoHashHasher<T>` implements `std::hash::Hasher` and
+For an enabled type `T`, a `IdentityHasher<T>` implements `std::hash::Hasher` and
 uses the value set by one of the `write_{u8, u16, u32, u64, usize, i8, i16, i32,
 i64, isize}` methods as its hash output.
 
-`NoHashHasher` does not implement any hashing algorithm and can only be used
+`IdentityHasher` does not implement any hashing algorithm and can only be used
 with types which can be mapped directly to a numeric value. Out of the box
-`NoHashHasher` is enabled for `u8`, `u16`, `u32`, `u64`, `usize`, `i8`, `i16`,
-`i32`, `i64`, and `isize`. Types that should be used with `NoHashHasher` need
+`IdentityHasher` is enabled for `u8`, `u16`, `u32`, `u64`, `usize`, `i8`, `i16`,
+`i32`, `i64`, and `isize`. Types that should be used with `IdentityHasher` need
 to implement [`IsEnabled`] and by doing so assert that their `Hash` impl invokes
 *only one* of the `Hasher::write_{u8, u16, u32, u64, usize, i8, i16, i32, i64,
 isize}` methods *exactly once*.

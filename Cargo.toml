@@ -1,12 +1,10 @@
 [package]
-name = "nohash-hasher"
-version = "0.2.0"
-edition = "2018"
-authors = ["Parity Technologies <admin@parity.io>"]
+name = "identity-hash"
+version = "0.1.0"
+edition = "2021"
 license = "Apache-2.0 OR MIT"
 description = "An implementation of `std::hash::Hasher` which does not hash at all."
-repository = "https://github.com/paritytech/nohash-hasher"
-readme = "README.md"
+repository = "https://github.com/offsetting/identity-hash"
 keywords = ["hash", "hasher", "hashmap", "hashset"]
 
 [features]
